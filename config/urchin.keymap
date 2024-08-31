@@ -20,10 +20,14 @@
 // -----------------
 
 &mt {
-    flavor = "tap-preferred";
+    flavor = "balanced";
     tapping-term-ms = <150>;
 };
 
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <150>;
+};
 &sk {
 	// don't release mods on other mods presses
 	ignore-modifiers;
@@ -56,36 +60,42 @@
 			label = "left_10";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
+			wait-ms = <1>;
 			bindings = <&kp LEFT>, <&kp LEFT>, <&kp LEFT>, <&kp LEFT>, <&kp LEFT>, <&kp LEFT>, <&kp LEFT>, <&kp LEFT>, <&kp LEFT>, <&kp LEFT>;
 		};
 		right_10: right_10 {
 			label = "right_10";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
+			wait-ms = <1>;
 			bindings = <&kp RIGHT>, <&kp RIGHT>, <&kp RIGHT>, <&kp RIGHT>, <&kp RIGHT>, <&kp RIGHT>, <&kp RIGHT>, <&kp RIGHT>, <&kp RIGHT>, <&kp RIGHT>;
 		};
 		up_10: up_10 {
 			label = "up_10";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
+			wait-ms = <1>;
 			bindings = <&kp UP>, <&kp UP>, <&kp UP>, <&kp UP>, <&kp UP>, <&kp UP>, <&kp UP>, <&kp UP>, <&kp UP>, <&kp UP>;
 		};
 		down_10: down_10 {
 			label = "down_10";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
+			wait-ms = <1>;
 			bindings = <&kp DOWN>, <&kp DOWN>, <&kp DOWN>, <&kp DOWN>, <&kp DOWN>, <&kp DOWN>, <&kp DOWN>, <&kp DOWN>, <&kp DOWN>, <&kp DOWN>;
 		};
 		backspace_10: backspace_10 {
 			label = "backspace_10";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
+			wait-ms = <1>;
 			bindings = <&kp BACKSPACE>, <&kp BACKSPACE>, <&kp BACKSPACE>, <&kp BACKSPACE>, <&kp BACKSPACE>, <&kp BACKSPACE>, <&kp BACKSPACE>, <&kp BACKSPACE>, <&kp BACKSPACE>, <&kp BACKSPACE>;
 		};
 		delete_10: delete_10 {
 			label = "delete_10";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
+			wait-ms = <1>;
 			bindings = <&kp DELETE>, <&kp DELETE>, <&kp DELETE>, <&kp DELETE>, <&kp DELETE>, <&kp DELETE>, <&kp DELETE>, <&kp DELETE>, <&kp DELETE>, <&kp DELETE>;
 		};
 	};
@@ -106,8 +116,8 @@
 		symbol_layer {
 			label = "Symbol";
 			bindings = <
-			&kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT							&kp PRCNT &kp AMPERSAND &kp STAR &kp LPAR &kp RPAR
-			&mt LSHFT GRAVE &kp LCTRL &mt LALT MINUS &mt LGUI EQUAL &none		&none &mt RGUI SINGLE_QUOTE &mt RALT BACKSLASH &mt RCTRL LPAR &mt RSHFT RPAR
+			&kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT							&kp CARET &kp AMPERSAND &kp STAR &kp LPAR &kp RPAR
+			&mt LSHFT GRAVE &kp LCTRL &mt LALT MINUS &mt LGUI EQUAL &none		&none &mt RGUI SINGLE_QUOTE &mt RALT BACKSLASH &mt RCTRL LBKT &mt RSHFT RBKT
 			&kp TILDE &kp LG(GRAVE) &kp UNDER &kp PLUS &none    				&none &kp DOUBLE_QUOTES &kp PIPE &kp LS(LBKT) &kp LS(RBKT)
 			&trans &trans    													&trans &trans
 			>;
@@ -148,7 +158,7 @@
 			bindings = <
 			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5    					&kp F6 &kp F7 &kp F8 &kp F9 &kp F10
 			&mt LSHFT F11 &mt LCTRL F12 &kp LALT &kp LGUI &none		&none &kp RGUI &kp RALT &kp RCTRL &kp RSHFT
-			&none &none &none &none &bootloader    					&none &none &none &none &none
+			&none &none &none &none &bootloader    					&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4
 			&trans &trans    										&trans &trans
 			>;
 		};
